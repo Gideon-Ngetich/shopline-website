@@ -18,7 +18,7 @@
 
 .btn-box{
   display: flex;
-  justify-conent: space-between;
+  justify-content: space-between;
 }
 
 @media(max-width: 450px){
