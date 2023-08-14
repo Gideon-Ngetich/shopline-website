@@ -18,7 +18,7 @@ export const Footer = () => {
                     <div>Terms of service</div> 
                     
                 </div>
-                <div className="footer-container center">   
+                <div className="footer-container right">   
                     <div>
                         2023 ShopLine
                         {/* <Icon icon={copyRight} size={25}/> */}

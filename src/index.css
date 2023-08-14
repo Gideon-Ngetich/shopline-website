@@ -161,15 +161,23 @@
   padding: 12px;
   border-radius: 10px; 
   background-color: #b9b5b5;
+  box-shadow: rgba(238, 230, 230, 0.19) 0px 10px 20px, rgba(245, 238, 238, 0.23) 0px 6px 6px;
 }
 
 .product:hover {
   transform: scale(1.05);
 }
+@media(max-width: 428px){
+  .product{
+    width: 300px;
+    margin: 30px 10px;
+  }
 
+}
 @media(min-width: 768px){
   .product{
     width: 300px;
+    margin-right: 10px;
   }
   
 }
@@ -360,8 +368,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid black; */
-  margin-top: 100px;
+  border: 1px solid black;
+  width: 100%;
 }
 .container .header{
   margin: 10px 10px;
@@ -383,6 +391,15 @@
   font-weight: 800;
   font-size: 20px;
 }
+.container .form-group .btn-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.container .form-group .btn-box button:hover{
+  background-color: rgb(7, 88, 3);
+  color: white;
+}
 @media(max-width: 450px){
   .container{
     margin: 0;
@@ -403,11 +420,94 @@
   }
   .container .form-group button{
     margin-top: 20px;
+    font-size: 12px;
+    padding: 10px 40px;
+    width: 100%;
+  }
+  .container .form-group .btn-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+
   }
   .container-login{
     background: linear-gradient(to right, #d9ff41, #2bffca);
   }
 }
+@media (min-width: 428px){
+  .container{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+  }
+  .container .form-group{
+    width: 300px;
+
+  }
+  .container .header{
+    width: 100%;
+    text-align: center;
+    height: 50px;  background-color: transparent;
+  }
+  .container .form-group label{
+    font-size: 15px;
+  }
+  .container .form-group .btn-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+
+  }
+  .container .form-group button{
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 10px 40px;
+    gap: 30px
+  }
+  .container-login{
+    background: linear-gradient(to right, #d9ff41, #2bffca);
+  }
+}
+@media (min-width: 570px){
+  .container{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+  }
+  .container .form-group{
+    width: 300px;
+    
+  }
+  .container .header{
+    width: 100%;
+    text-align: center;
+    height: 50px;  background-color: transparent;
+  }
+  .container .form-group label{
+    font-size: 15px;
+  }
+  .container .form-group .btn-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+
+  }
+  .container .form-group button{
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 10px 40px;
+    gap: 30px
+  }
+  .container-login{
+    background: linear-gradient(to right, #d9ff41, #2bffca);
+  }
+}  
+
 .footer{
   display: flex;
   flex-direction: column;
@@ -419,22 +519,19 @@
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-
+  padding: 10px 50px 20px 50px;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  gap: 70px;
 }
 .navlink{
   text-decoration: none;
   
 }
-.footer-container{
-  display: flex;
-  flex-direction: row;
-  padding: 10px 50px 20px 50px;
-  justify-content: space-between;
-  align-self: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;}
+
 .footer-container .center{
 
   display : flex;
@@ -442,4 +539,35 @@
   justify-content: space-between;
   gap: 20px;
 }
-
+@media(max-width: 450px){
+  .footer{
+    height: 70px;
+   
+  }
+  .foot-container{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: space-between;
+    gap: 15px;
+  }
+  .footer-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 20px 0px;
+  }
+  .footer-container .center{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .footer-container ,.center, .left, .right{
+    font-size: 15px;
+  }
+  .footer-container .center .navlink:hover{
+    color: #fff;
+  }
+ 
+  
+}
