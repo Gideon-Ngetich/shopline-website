@@ -5,7 +5,7 @@ import { CartProducts } from './CartProducts';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom'
-
+import {Footer} from './Footer'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Modal } from './Modal';
@@ -206,9 +206,9 @@ export const Cart = () => {
                         <div>
                         Total Price to Pay: <span>$ {totalPrice}</span>
                         </div>
-                        <br></br>
+                        
                         <StripeCheckout
-                            stripeKey='pk_test_51Hhu6bK4kL4WRmvGEUkTmdFw1lUtTAnadBSDb0eXGuA2JJGrntIBdm10llYu5RbPbLbaS1My74Rgdi0n5ePYIGB600p3V4GKmK'
+                            stripeKey='pk_test_51NduVhFwcSbFRfv5HsgcbK0Rg4J5BvaQ7S18gExHFCfAveE4YJPhvfYIOOc656tmmaoqaFXbb7lgneUh5RYUDzGv00UYPKUb3Z'
                             token={handleToken}
                             billingAddress
                             shippingAddress
@@ -231,7 +231,7 @@ export const Cart = () => {
                     hideModal={hideModal}
                 />
             )}          
-                            
+            <Footer/>          
         </>
     )
 }

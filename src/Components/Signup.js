@@ -11,9 +11,15 @@ export const Signup = () => {
     const [fullName, setFullname]=useState('');
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [passwordMatch, setPasswordMatch] = useState(true);
 
     const [errorMsg, setErrorMsg]=useState('');
     const [successMsg, setSuccessMsg]=useState('');
+
+    
+
+   
 
     const handleSignup=(e)=>{
         e.preventDefault();
@@ -38,6 +44,16 @@ export const Signup = () => {
         }).catch((error)=>{
             setErrorMsg(error.message)
         })
+
+        if (password === confirmPassword) {
+            // Passwords match, you can proceed with further actions here
+            console.log('Passwords match');
+            setPasswordMatch(true);
+          } else {
+            // Passwords do not match
+            console.log('Passwords do not match');
+            setPasswordMatch(false);
+          }
     }
     
     return (
@@ -63,7 +79,15 @@ export const Signup = () => {
                 <br></br>
                 <label>Password</label>
                 <input type="password" className='form-control' required
-                 onChange={(e)=>setPassword(e.target.value)} value={password}></input>
+                 onChange={(e)=>setPassword(e.target.value)} value={password}
+                 style={{ outline: passwordMatch ? 'none' : '2px solid red' }}
+                 ></input>
+                 <br></br>
+                <label>Confirm Password</label>
+                <input type="password" className='form-control' required
+                 onChange={(e)=> setConfirmPassword(e.target.value)} value={confirmPassword}
+                 style={{ outline: passwordMatch ? 'none' : '2px solid red' }}
+                 ></input>
                 <br></br>
                 <div className='btn-box'>
                     <span>Already have an account Login
@@ -71,6 +95,9 @@ export const Signup = () => {
                     <button type="submit" className='btn btn-success btn-md'>SIGN UP</button>
                 </div>
             </form>
+            {passwordMatch ? null : (
+          <p style={{ color: 'red' }}>Passwords do not match!</p>
+        )}
             {errorMsg&&<>
                 <br></br>
                 <div className='error-msg'>{errorMsg}</div>                

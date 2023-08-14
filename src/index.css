@@ -9,7 +9,6 @@
 .container-fluid{
   background-color: #060505;
   
-
 }
 .wrapper{
   overflow-x: hidden;
@@ -267,14 +266,17 @@
 
 /* summary box */
 .summary-box{
-  width: 300px;
-  margin: 30px auto;
+  width: 400px;
+  margin:auto;
   border: 1px solid #b9b5b5;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding:30px;
+  background-color: #dadada;
 }
-
+.summary-box .text-center{
+  color: #000;
+}
 .summary-box h5{
   display: flex;  
   border-bottom: 1px solid #e00a02;
