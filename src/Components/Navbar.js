@@ -5,6 +5,7 @@ import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {auth} from '../Config/Config'
 import {useHistory} from 'react-router-dom'
+// import {personalDetailsForm} from './UserUpdate'
 
 export const Navbar = ({user,totalProducts}) => {
 
@@ -33,7 +34,7 @@ export const Navbar = ({user,totalProducts}) => {
 
                 {user&&<>
                     <div><Link className='navlink' to="/">Home</Link></div>
-                    <div><Link className='navlink' to="/">{user}</Link></div>
+                    <div><Link className='navlink' to="user-update" >{user}</Link></div>
                     <div className='cart-menu-btn'>
                         <Link className='navlink' to="cart">
                             <Icon icon={shoppingCart} size={25}/>

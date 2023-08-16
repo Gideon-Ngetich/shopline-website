@@ -4,6 +4,7 @@ import { Products } from './Products'
 import {auth,fs} from '../Config/Config'
 import {Footer} from './Footer'
 
+
 export const Home = (props) => {
 
     // getting current user uid
@@ -112,7 +113,7 @@ export const Home = (props) => {
                 </div>
             )}
             {products.length < 1 && (
-                <div className='container-fluid'>Please wait....</div>
+                <div className='container-fluid-loading'>Please wait....</div>
             )}
             <Footer />
         </>

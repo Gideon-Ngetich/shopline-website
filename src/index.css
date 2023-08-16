@@ -10,6 +10,16 @@
   background-color: #060505;
   
 }
+.container-fluid-cart, .container-fluid-loading{
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
 .wrapper{
   overflow-x: hidden;
   overflow-y: auto;
@@ -29,17 +39,17 @@
 }
 
 .success-msg{
-  width: 100%;
+  width: 70%;
   padding: 14px;
   background-color: #dff0d8;
   color: #468847;
 }
 
 .error-msg{
-  width: 100%;
+  width: 80%;
   padding: 14px;
   background-color: #f0d0d3;
-  color: #df786f;
+  color: #ee1b08;
 }
 
 .link{
@@ -436,6 +446,9 @@
   .container-login{
     background: linear-gradient(to right, #d9ff41, #2bffca);
   }
+  .container-update{
+    background:linear-gradient(to right, #4eff41, #aaff2b)
+  }
 }
 @media (min-width: 428px){
   .container{
@@ -471,7 +484,11 @@
   .container-login{
     background: linear-gradient(to right, #d9ff41, #2bffca);
   }
+  .container-update{
+    background:linear-gradient(to right, #4eff41, #aaff2b)
+  }
 }
+
 @media (min-width: 570px){
   .container{
     margin: 0%;
@@ -507,6 +524,9 @@
   }
   .container-login{
     background: linear-gradient(to right, #d9ff41, #2bffca);
+  }
+  .container-update{
+    background:linear-gradient(to right, #4eff41, #aaff2b)
   }
 }  
 

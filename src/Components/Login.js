@@ -39,15 +39,19 @@ export const Login = () => {
                 <div className='success-msg'>{successMsg}</div>
                 <br></br>
             </>}
+            {errorMsg&&<>
+                <div className='error-msg'>{errorMsg}</div>
+                <br></br>
+            </>}
             <form className='form-group' autoComplete="off"
             onSubmit={handleLogin}>               
                 <label>Email</label>
                 <input type="email" className='form-control' required
-                onChange={(e)=>setEmail(e.target.value)} value={email}></input>
+                onChange={(e)=>setEmail(e.target.value)} value={email} placeholder='Email Address'></input>
                 <br></br>
                 <label>Password</label>
                 <input type="password" className='form-control' required
-                onChange={(e)=>setPassword(e.target.value)} value={password}></input>
+                onChange={(e)=>setPassword(e.target.value)} value={password} placeholder='Password'></input>
                 <br></br>
                 <div className='btn-box'>
                     <span>Don't have an account SignUp
@@ -55,10 +59,7 @@ export const Login = () => {
                     <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
                 </div>
             </form>
-            {errorMsg&&<>
-                <br></br>
-                <div className='error-msg'>{errorMsg}</div>                
-            </>}
+            
         </div>
     )
 }

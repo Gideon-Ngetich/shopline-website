@@ -223,7 +223,7 @@ export const Cart = () => {
                 </div>
             )}
             {cartProducts.length < 1 && (
-                <div className='container-fluid'>No products to show</div>
+                <div className='container-fluid-cart'><p>No products on your cart</p></div>
             ) }
 
             {showModal===true&&(
